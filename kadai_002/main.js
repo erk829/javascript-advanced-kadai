@@ -100,7 +100,7 @@ const gameOver = () => {
   if(result == true) {
     window.location.reload();
   }
-  },10000)
+  }, 10*1000);
 };
 
 // カウントダウンタイマー
@@ -117,9 +117,9 @@ const timer = () => {
 
     // カウントが0になったらタイマーを停止する
     if(time <= 0) {
-      clearInterval(id);
       typedfield.textContent = '';
       untypedfield.textContent = 'タイムアップ！';
+      clearInterval(id);
       gameOver();
     }
   }, 1000);
